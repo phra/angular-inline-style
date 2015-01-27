@@ -1,14 +1,26 @@
 'use strict';
 
-angular.module('dm.style', [])
-  .directive('inline-style', function($compile) {
-    return {
-      restrict: 'E',
-      link: function postLink(scope, element) {
-        if (element.html()) {
-          var template = $compile('<style ng-bind-template="' + element.html() + '"></style>');
-          element.replaceWith(template(scope));
-        }
-      }
-    };
-  });
+angular.module('bitliner.inlineStyle', [])
+    .directive('inlineStyle', function($compile, $log) {
+        return {
+            scope: {
+                'css': '='
+            },
+            restrict: 'E',
+            link: function postLink(scope, element) {
+                var content, result;
+
+                function update(str) {
+                    element.replaceWith('<style>' + scope.css + '</style>');
+                    // element.replaceWith('<style ng-bind-template="' + str + '"></style>');
+                }
+
+
+                scope.$watch('css', function(n) {
+                    $log.info('n', n);
+                    update(n);
+                });
+
+            }
+        };
+    });

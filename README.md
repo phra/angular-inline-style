@@ -1,21 +1,10 @@
-#Angular variables inside style blocks
+This angular directive allows you to have inline style tag `<style></style>` where the content comes from the angular scope.
 
-This small directive allows angular variables to be evaluated into style blocks.
+# Usage
 
-e.g.
-
-```css
-<style>
-	body {
-		background-color:{{bgColor}};
-	}
-</style>
+```
+<inline-style ng-controller="MyCtrl" css="css"></inline-style>
 ```
 
-With the variable bgColor available in some parent scope.
+where *MyCtrl* is a controller where the scope is defined and css is a variable defined in MyCtrl's scope.
 
-##Usage
-- Include dmStyle.js
-- Add dm.style as a dependency to your app module.
-
-Thats it! This will automatically start compiling inline CSS.
