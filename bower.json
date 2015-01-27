@@ -1,0 +1,26 @@
+{
+  "name": "angular-inline-style-directive",
+  "version": "0.0.1",
+  "homepage": "https://github.com/bitliner/angular-inline-style",
+  "main":"angular-inline-style-directive.js",
+  "authors": [
+    "bitliner <giovanni.gaglione@gmail.com>"
+  ],
+  "keywords": [
+    "angular",
+    "inline",
+    "style",
+    "directive",
+    "variable",
+    "in",
+    "style"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

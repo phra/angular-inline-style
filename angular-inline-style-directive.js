@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('dm.style', [])
-  .directive('style', function($compile) {
+  .directive('inline-style', function($compile) {
     return {
       restrict: 'E',
       link: function postLink(scope, element) {
