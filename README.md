@@ -1,3 +1,6 @@
+angular-inline-style-directive
+====================================
+
 This angular directive allows you to have inline style tag `<style></style>` where the content comes from the angular scope.
 
 # Usage
@@ -8,3 +11,6 @@ This angular directive allows you to have inline style tag `<style></style>` whe
 
 where *MyCtrl* is a controller where the scope is defined and `css` is a variable defined in *MyCtrl* 's scope.
 
+# Installation
+
+`bower install --save angular-inline-style-directive`
