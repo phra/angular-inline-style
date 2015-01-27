@@ -6,5 +6,5 @@ This angular directive allows you to have inline style tag `<style></style>` whe
 <inline-style ng-controller="MyCtrl" css="css"></inline-style>
 ```
 
-where *MyCtrl* is a controller where the scope is defined and `css` is a variable defined in MyCtrl's scope.
+where *MyCtrl* is a controller where the scope is defined and `css` is a variable defined in *MyCtrl* 's scope.
 
