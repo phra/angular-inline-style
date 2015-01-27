@@ -4,20 +4,28 @@ angular.module('bitliner.inlineStyle', [])
     .directive('inlineStyle', function($compile, $log) {
         return {
             scope: {
-                'css': '='
+                'css': '@'
             },
             restrict: 'E',
             link: function postLink(scope, element) {
-                var content, result;
+                var $el;
 
-                function update(str) {
-                    element.replaceWith('<style>' + scope.css + '</style>');
-                    // element.replaceWith('<style ng-bind-template="' + str + '"></style>');
+                $el = $(element);
+
+                function update() {
+                    var content;
+
+
+                    content = '<style>' + scope.css + '</style>';
+
+
+                    $el.html(content);
+
                 }
 
 
                 scope.$watch('css', function(n) {
-                    $log.info('n', n);
+                    scope.css = n;
                     update(n);
                 });
 
